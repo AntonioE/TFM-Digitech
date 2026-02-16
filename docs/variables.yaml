@@ -1,0 +1,92 @@
+variables:
+  demograficas:
+    - name: S_Age
+      dataset: NFCS
+      description: Edad del encuestado
+    - name: S_Gender2
+      dataset: NFCS
+      description: Género del encuestado
+    - name: S_Education
+      dataset: NFCS
+      description: Nivel educativo del encuestado
+    - name: S_Income
+      dataset: NFCS
+      description: Ingreso anual del hogar (rango categórico)
+
+  capacidad:
+    - name: B4
+      dataset: NFCS
+      description: Valor estimado de inversiones fuera de planes de jubilación
+
+  comportamiento:
+    - name: B3
+      dataset: NFCS
+      description: Frecuencia de operaciones en los últimos 12 meses
+    - name: B30
+      dataset: NFCS
+      description: Tiempo desde que empezó a invertir (años)
+    - name: B2_1 to B2_25
+      dataset: NFCS
+      description: Tipo de productos financieros que posee (acciones, bonos, REITs, etc.)
+    - name: F31_1 to F31_11
+      dataset: NFCS
+      description: Uso de redes sociales y otras fuentes para decisiones de inversión
+
+  conocimiento:
+    - name: G2
+      dataset: NFCS
+      description: Autoevaluación del conocimiento financiero (escala 1–7)
+    - name: G4 to G13
+      dataset: NFCS
+      description: Conocimiento sobre instrumentos financieros (acciones, bonos, índices, ETFs)
+    - name: FIN_LIT_SCORE_ALT
+      dataset: NFCS
+      derived: true
+      source: G4 to G13
+      description: Puntaje alternativo de conocimiento financiero (número de respuestas correctas)
+
+  psicologia:
+    - name: B10
+      dataset: NFCS
+      description: Disposición a asumir riesgos financieros (1–4)
+    - name: RISK_SCORE_10
+      dataset: NFCS
+      derived: true
+      source: B10
+      description: Versión reescalada de B10 para comparabilidad interdataset (1–10)
+    - name: C26
+      dataset: NFCS
+      derived: true
+      description: Proxy de actitud al invertir; 1 = cómodo, 2 = incómodo
+    - name: D2
+      dataset: NFCS
+      description: Expectativa de rendimiento del mercado a 10 años (S&P500)
+    - name: D3
+      dataset: NFCS
+      description: Expectativa personal de rendimiento de inversiones a 10 años
+    - name: D21
+      dataset: NFCS
+      description: Reacción ante caída del 20% (vender, mantener, comprar)
+    - name: D30
+      dataset: NFCS
+      description: Reacción ante subida del 20%
+    - name: D31
+      dataset: NFCS
+      description: Preocupación por fraudes o engaños (escala 1–7)
+    - name: D1_1
+      dataset: NFCS
+      description: Confianza en los mercados financieros
+    - name: D1_2
+      dataset: NFCS
+      description: Confianza en la equidad del sistema
+    - name: E1_1
+      dataset: NFCS
+      description: Confianza en la protección al consumidor
+    - name: E20
+      dataset: NFCS
+      description: Opinión sobre transparencia del sector financiero
+
+  objetivo:
+    - name: C12
+      dataset: NFCS
+      description: Objetivo principal de inversión (retiro, casa, educación, etc.)
