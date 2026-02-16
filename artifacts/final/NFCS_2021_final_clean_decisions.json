@@ -164,7 +164,7 @@
     "B4_log": {
       "transformacion": "np.log1p(B4)",
       "orig_skew": -0.5843164895581131,
-      "new_skew": -1.3912883917012921
+      "new_skew": -1.3912883917012917
     }
   },
   "types": {
